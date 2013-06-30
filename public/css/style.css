@@ -53,6 +53,10 @@ div#personal-avatar img {
     width: 100%;
     height: 100px;
 }
+.description-section p{
+    background-color: #ddd;
+}
+
 
 .description-section img {
     margin-left: 15px;
