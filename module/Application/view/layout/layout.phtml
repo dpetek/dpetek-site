@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle($this->translate('Dpetek - Personal website'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle($this->translate('Denis Petek'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
 
@@ -39,27 +39,32 @@
 
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
+            <div class="navbar">
                 <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Dpetek - Personal website') ?></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                    </button>
+
+                    <!-- Be sure to leave the brand out there if you want it shown -->
+                    <a class="navbar-brand" href="#">Personal website</a>
+
+                    <!-- Place everything within .navbar-collapse to hide it until above 768px -->
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">About me</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Puzzles</a></li>
                         </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
+                    </div><!-- /.nav-collapse -->
+                </div><!-- /.container -->
+            </div><!-- /.navbar -->
         <div class="container">
             <?php echo $this->content; ?>
             <footer>
-                <p style='color: #999;font-size: 12px;font-style:italic;'>* Under construction</p>
+                <p style='color: #999;font-size: 12px;font-style:italic;'></p>
             </footer>
         </div> <!-- /container -->
         <?php echo $this->inlineScript() ?>
