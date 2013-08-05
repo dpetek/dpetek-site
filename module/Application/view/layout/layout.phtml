@@ -54,9 +54,9 @@
                     <!-- Place everything within .navbar-collapse to hide it until above 768px -->
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">About me</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Puzzles</a></li>
+                            <li class="<?php echo ($this->active === 'home') ? 'active' : ""; ?>"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                            <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Blog') ?></a></li>
+                            <li class="<?php echo ($this->active === 'puzzles') ? 'active' : ""; ?>"><a href="<?php echo $this->url('puzzles') ?>"><?php echo $this->translate('Puzzles') ?></a></li>
                         </ul>
                     </div><!-- /.nav-collapse -->
                 </div><!-- /.container -->

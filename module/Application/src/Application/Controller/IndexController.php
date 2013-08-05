@@ -16,6 +16,15 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        return new ViewModel(array(
+            'active' => 'home'
+        ));
+    }
+
+    public function puzzlesAction()
+    {
+        return new ViewModel(array(
+            'active' => 'puzzles'
+        ));
     }
 }
