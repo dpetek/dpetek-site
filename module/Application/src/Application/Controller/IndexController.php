@@ -21,10 +21,13 @@ class IndexController extends AbstractActionController
         ));
     }
 
-    public function puzzlesAction()
+    public function projectsAction()
     {
-        return new ViewModel(array(
-            'active' => 'puzzles'
-        ));
+        return new ViewModel();
+    }
+
+    public function blogAction()
+    {
+        return new ViewModel();
     }
 }

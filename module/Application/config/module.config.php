@@ -10,6 +10,16 @@
 return array(
     'router' => array(
         'routes' => array(
+            'main-routes' => array(
+               'type' => 'Segment',
+                'options' => array(
+                    'route' => '/[:action]',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index'
+                    )
+                )
+            ),
+
             'home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
@@ -19,16 +29,6 @@ return array(
                         'action'     => 'index',
                     ),
                 ),
-            ),
-            'puzzles' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route' => '/puzzles',
-                    'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
-                        'action'     => 'puzzles',
-                    ),
-                )
             ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
